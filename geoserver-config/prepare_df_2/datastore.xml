@@ -1,0 +1,13 @@
+<dataStore>
+  <id>prepare_df_2_datastore</id>
+  <name>prepare_df_2_datastore</name>
+  <enabled>true</enabled>
+  <workspace>
+    <id>tilknytning</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="namespace">http://www.digin.no/tilknytning</entry>
+    <entry key="url">file:workspaces/tilknytning/prepare_df_2/prepare_df_2.xml</entry>
+    <entry key="dbtype">app-schema</entry>
+  </connectionParameters>
+</dataStore>

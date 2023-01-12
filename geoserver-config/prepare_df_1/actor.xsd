@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.digin.no/tilknytning"
+    xmlns:dt="http://www.digin.no/tilknytning"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+
+    <xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+
+    <xs:element name="actor" type="dt:actor" />
+    <xs:complexType name="actor">
+        <xs:sequence>
+            <xs:element name="role" type="dt:Role" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="orgnumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

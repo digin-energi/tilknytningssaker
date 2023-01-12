@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.digin.no/tilknytning"
+    xmlns:dt="http://www.digin.no/tilknytning"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+
+    <xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+
+    <xs:element name="prepare_df_2" type="dt:prepare_df_2" />
+    <xs:complexType name="prepare_df_2">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="geom" type="gml:PointPropertyType" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="fosweb_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="customer_need_fulfilled_estimate" type="xs:date" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="customer_need_on_terms_fulfilled_estimate" type="xs:date" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="investment_contribution_estimate" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="df_reply" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="comment" type="xs:string" minOccurs="1" maxOccurs="1" />
+                    <xs:element name="case_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="case_owner_orgnumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="sender_orgnumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="plannett_ref" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

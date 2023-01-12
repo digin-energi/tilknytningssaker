@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "1",
+      "geometry": { "type": "Point", "coordinates": [58.78611, 5.61667] },
+      "properties": {
+        "@featureType": "prepare_df_1",
+        "geom": { "type": "Point", "coordinates": [58.78611, 5.61667] },
+        "case_id": "234",
+        "case_owner_orgnumber": "977285712",
+        "fosweb_id": "1",
+        "voltage_level": 11000,
+        "comment": "Skal bli Norges største og beste bakeri; regner opp mot 37 MW om 12 år, men starter forsiktig med 200 kW de første 5 år. Vil i gang snarest mulig.",
+        "customer_type": "Bakeri med solceller på tak",
+        "max_load": 37,
+        "min_load": 0.2,
+        "max_injection": 5,
+        "min_injection": 0,
+        "production_type": "Sol",
+        "estimated_connection_date": "2023-07-31Z",
+        "customer_flexibility": "Svært fleksibel unntatt hver natt fra 0100 til 0700",
+        "customer_maturity": "Middels",
+        "customer_need_comment": "Kundens makslast vil komme i timer med lav belastning i nettet for øvrig",
+        "customer_growth_comment": "Kunden planlegger boller og brus",
+        "assumed_relevant_maxpower_for_df_assessment": 14,
+        "actors": [
+          { "role": "Uttakskunde", "orgnumber": "111222333" },
+          { "role": "Transmisjonsnett", "orgnumber": "962986633" },
+          { "role": "Tilknyttet nettselskap", "orgnumber": "980038408" },
+          { "role": "Tilknyttende nettselskap", "orgnumber": "977285712" }
+        ]
+      }
+    }
+  ],
+  "totalFeatures": 1,
+  "numberMatched": 1,
+  "numberReturned": 1,
+  "timeStamp": "2022-12-20T12:42:46.068Z",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:EPSG::4326" }
+  }
+}

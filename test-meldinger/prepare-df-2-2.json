@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "2",
+      "geometry": { "type": "Point", "coordinates": [58.78611, 5.61667] },
+      "properties": {
+        "@featureType": "prepare_df_2",
+        "geom": { "type": "Point", "coordinates": [58.78611, 5.61667] },
+        "customer_need_fulfilled_estimate": "2026-01-01",
+        "customer_need_on_terms_fulfilled_estimate": "2024-01-01",
+        "comment": "Konkurrerer om samme kapasitet i transmisjon",
+        "case_id": "234",
+        "case_owner_orgnumber": "977285712",
+        "sender_orgnumber": "982974011"
+      }
+    }
+  ],
+  "totalFeatures": 1,
+  "numberMatched": 1,
+  "numberReturned": 1,
+  "timeStamp": "2022-12-09T09:52:35.746Z",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:EPSG::4326" }
+  }
+}

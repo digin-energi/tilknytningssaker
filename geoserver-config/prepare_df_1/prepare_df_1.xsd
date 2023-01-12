@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.digin.no/tilknytning"
+    xmlns:dt="http://www.digin.no/tilknytning"
+    xmlns:gml="http://www.opengis.net/gml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+
+    <xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+
+    <xs:element name="prepare_df_1" type="dt:prepare_df_1" />
+    <xs:complexType name="prepare_df_1">
+        <xs:complexContent>
+            <xs:extension base="gml:AbstractFeatureType">
+                <xs:sequence>
+                    <xs:element name="geom" type="gml:PointPropertyType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="case_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="case_owner_orgnumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="fosweb_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="voltage_level" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="comment" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="customer_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="max_load" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="min_load" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="max_injection" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="min_injection" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="production_type" type="dt:ProductionType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="estimated_connection_date" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="customer_flexibility" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="customer_maturity" type="dt:Maturity" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="customer_need_comment" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="customer_growth_comment" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="assumed_relevant_maxpower_for_df_assessment" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="actors" type="dt:actor" minOccurs="1" maxOccurs="unbounded" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="ProductionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Sol" />
+            <xs:enumeration value="Vind" />
+            <xs:enumeration value="Elv" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Maturity">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Liten" />
+            <xs:enumeration value="Middels" />
+            <xs:enumeration value="Stor" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Role">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Uttakskunde" />
+            <xs:enumeration value="Tilknyttende nettselskap" />
+            <xs:enumeration value="Tilknyttet nettselskap" />
+            <xs:enumeration value="Transmisjonsnett" />
+            <xs:enumeration value="Annet nettselskap" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
